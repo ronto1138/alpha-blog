@@ -1,44 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>TEST_APP</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: Arial;
-  margin: 0;
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.header {
-  padding: 30px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-  font-size: 30px;
-}
-
-.content {padding:20px;}
-</style>
-</head>
-<body>
-<div class="header">
-  <h1>Alpha Blog</h1>
+<div class="center jumbotron">
+  <h1>ALPHA BLOG</h1>
+  <%= link_to "Sign up now", "#", class: "btn btn-success btn-lg btn-xlarge" %>
 </div>
 
-
-<div class="content">
-  <p>This is the Home Page</p>
-  </div>
-
-<%= link_to "Alpha Blog", articles_path %> | <%= link_to "About", about_path %>
-
-</body>
-</html>
 
