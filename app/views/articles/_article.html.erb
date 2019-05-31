@@ -1,4 +1,4 @@
-<% obj.each do |articles| %>
+\<% obj.each do |articles| %>
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
       <div class="well well-lg">
@@ -13,6 +13,9 @@
                    last updated: <%= time_ago_in_words(articles.updated_at) %> ago </small>
           </div>
         </div>
+        <% if articles.categories.any? %>
+          <p>Categories: <%= render articles.categories %></p>
+        <% end %>
         <% if logged_in? && (current_user == articles.user || current_user.admin? ) %>
           <div class_"article-actions">
             <%= link_to "Edit this article", edit_article_path(articles), class: "btn btn-xs btn-primary" %>
